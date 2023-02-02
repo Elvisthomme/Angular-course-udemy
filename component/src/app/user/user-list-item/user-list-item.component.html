@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-sm-6">
+      <div class="card hovercard">
+        <div class="cardheader"></div>
+        <div class="avatar">
+          <img
+            [alt]="user.name"
+            [src]="
+              user.image ??
+              'https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg'
+            "
+          />
+        </div>
+        <div class="info">
+          <div class="title">
+            <a href="#">{{ user.name }}</a>
+          </div>
+          <div class="desc">{{ user.jop }}</div>
+          <div class="desc">{{ user.company }}</div>
+          <div class="desc" *ngIf="user.about">{{ user.about }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
